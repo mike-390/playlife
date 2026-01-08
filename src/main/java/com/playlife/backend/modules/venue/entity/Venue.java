@@ -30,6 +30,12 @@ public class Venue {
     @Column(name = "phone_number")
     private String phoneNumber;
 
+    @Column(name = "latitude")
+    private Double latitude;
+
+    @Column(name = "longitude")
+    private Double longitude;
+
     @OneToMany(mappedBy = "venue", cascade = CascadeType.ALL)
     private List<Court> courts;
 }

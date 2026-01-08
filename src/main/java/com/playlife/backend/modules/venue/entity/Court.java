@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -39,5 +40,7 @@ public class Court {
     @JoinColumn(name = "venue_id", nullable = false)
     private Venue venue;
 
+    @OneToMany(mappedBy = "court", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CourtImage> images;
 }
 
