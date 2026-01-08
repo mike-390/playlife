@@ -38,4 +38,7 @@ public class Venue {
 
     @OneToMany(mappedBy = "venue", cascade = CascadeType.ALL)
     private List<Court> courts;
+
+    @OneToMany(mappedBy = "venue", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Review> reviews;
 }
