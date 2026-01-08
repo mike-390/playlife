@@ -1,4 +1,4 @@
-package com.playlife.backend.modules.User.Entity;
+package com.playlife.backend.modules.user.Entity;
 
 import com.playlife.backend.enums.UserRole;
 import jakarta.persistence.*;

@@ -1,6 +1,6 @@
 package com.playlife.backend.modules.venue.entity;
 
-import com.playlife.backend.modules.User.Entity.User;
+import com.playlife.backend.modules.user.Entity.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
