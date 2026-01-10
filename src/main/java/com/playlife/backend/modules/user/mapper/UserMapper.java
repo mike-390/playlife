@@ -1,6 +1,7 @@
 package com.playlife.backend.modules.user.mapper;
 
 import com.playlife.backend.modules.user.Entity.User;
+import com.playlife.backend.modules.user.dto.AuthResponse;
 import com.playlife.backend.modules.user.dto.RegisterRequest;
 import com.playlife.backend.modules.user.dto.UserResponse;
 import org.mapstruct.Mapper;
@@ -15,4 +16,7 @@ public interface UserMapper {
     User toEntity(RegisterRequest request);
 
     UserResponse toResponse(User user);
+
+    @Mapping(target = "accessToken", source = "token")
+    AuthResponse toAuthResponse(User user, String token);
 }

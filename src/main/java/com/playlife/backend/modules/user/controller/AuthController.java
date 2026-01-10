@@ -1,5 +1,7 @@
 package com.playlife.backend.modules.user.controller;
 
+import com.playlife.backend.modules.user.dto.AuthResponse;
+import com.playlife.backend.modules.user.dto.LoginRequest;
 import com.playlife.backend.modules.user.dto.RegisterRequest;
 import com.playlife.backend.modules.user.dto.UserResponse;
 import com.playlife.backend.modules.user.service.UserService;
@@ -20,5 +22,10 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<UserResponse> register(@RequestBody @Valid RegisterRequest request){
         return ResponseEntity.ok(userService.register(request));
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody @Valid LoginRequest request){
+        return ResponseEntity.ok(userService.login(request));
     }
 }
