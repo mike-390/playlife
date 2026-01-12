@@ -27,6 +27,9 @@ public class Venue {
     @Column(nullable = false)
     private String address;
 
+    @Column(nullable = false, unique = true)
+    private String email;
+
     @Column(name = "phone_number")
     private String phoneNumber;
 

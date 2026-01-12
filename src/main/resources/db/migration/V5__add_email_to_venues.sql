@@ -1,0 +1,5 @@
+ALTER TABLE venues
+ADD COLUMN email VARCHAR(255);
+
+ALTER TABLE venues
+ADD CONSTRAINT uq_venue_email UNIQUE (email);
