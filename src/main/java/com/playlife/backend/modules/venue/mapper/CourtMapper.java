@@ -12,14 +12,14 @@ import org.mapstruct.Mappings;
 public interface CourtMapper {
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "venue")
+    @Mapping(target = "venue", ignore = true)
     @Mapping(target = "images", ignore = true)
     Court toEntity(CourtRequest request);
 
     CourtResponse toResponse(Court court);
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "venue")
+    @Mapping(target = "venue", ignore = true)
     @Mapping(target = "images", ignore = true)
     void updateEntityFromRequest(CourtRequest request, @MappingTarget Court court);
 }

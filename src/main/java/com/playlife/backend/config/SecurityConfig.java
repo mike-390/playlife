@@ -28,6 +28,10 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/venues").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.GET, "/api/venues").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/venues/*/courts/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/venues/*/courts").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/venues/*/courts/*").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/venues/*/courts/*").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sess -> sess
