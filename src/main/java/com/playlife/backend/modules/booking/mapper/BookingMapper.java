@@ -14,7 +14,7 @@ public interface BookingMapper {
     @Mapping(target = "court", ignore = true)
     @Mapping(target = "totalPrice", ignore = true)
     @Mapping(target = "status",  ignore = true)
-    @Mapping(target = "createAt",  ignore = true)
+    @Mapping(target = "createdAt",  ignore = true)
     Booking toEntity(BookingRequest request);
 
     @Mapping(target = "venueName", source = "court.venue.name")

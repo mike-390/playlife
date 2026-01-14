@@ -32,6 +32,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/venues/*/courts").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/venues/*/courts/*").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/venues/*/courts/*").hasRole("ADMIN")
+                        .requestMatchers("/api/bookings/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sess -> sess
