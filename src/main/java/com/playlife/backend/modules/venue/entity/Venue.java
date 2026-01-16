@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -44,4 +45,7 @@ public class Venue {
 
     @OneToMany(mappedBy = "venue", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviews;
+
+    @OneToMany(mappedBy = "venue", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<VenueImage> images = new ArrayList<>();
 }

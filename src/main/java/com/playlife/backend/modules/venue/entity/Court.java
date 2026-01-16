@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -41,6 +42,6 @@ public class Court {
     private Venue venue;
 
     @OneToMany(mappedBy = "court", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CourtImage> images;
+    private List<CourtImage> images = new ArrayList<>();
 }
 

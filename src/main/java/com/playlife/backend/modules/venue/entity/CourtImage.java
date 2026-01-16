@@ -1,10 +1,7 @@
 package com.playlife.backend.modules.venue.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
@@ -14,6 +11,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class CourtImage {
 
     @Id
