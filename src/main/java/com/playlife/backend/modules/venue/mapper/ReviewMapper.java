@@ -15,6 +15,6 @@ public interface ReviewMapper {
     @Mapping(target="venue", ignore = true)
     Review toEntity(ReviewRequest request);
 
-    @Mapping(target ="user", expression = "java(review.getUser().getFirstName() + ' ' + review.getUser.getLastName())")
+    @Mapping(target ="userName", expression = "java(review.getUser().getFirstName() + ' ' + review.getUser().getLastName())")
     ReviewResponse toResponse(Review review);
 }
